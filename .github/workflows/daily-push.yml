@@ -21,6 +21,6 @@ jobs:
 
       - name: Run morning push
         env:
-          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
-          WECHAT_WEBHOOK_URL: ${{ secrets.WECHAT_WEBHOOK_URL }}
+          PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+          PUSH_CHANNEL: ${{ secrets.PUSH_CHANNEL }}
         run: python main.py
