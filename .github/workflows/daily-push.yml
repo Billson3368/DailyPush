@@ -21,6 +21,5 @@ jobs:
 
       - name: Run morning push
         env:
-          PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
-          PUSH_CHANNEL: ${{ secrets.PUSH_CHANNEL }}
+          WECHAT_WEBHOOK_URL: ${{ secrets.WECHAT_WEBHOOK_URL }}
         run: python main.py

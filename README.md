@@ -1,31 +1,22 @@
 # 微信早报机器人
 
-每天 8:30 自动推送新闻、股票、虚拟币价格到个人微信。
+每天 8:30 自动推送新闻、股票、虚拟币价格到企业微信群。
 
 ## 快速开始
 
-### 1. 获取推送 Token
+### 1. 获取企业微信群机器人 Webhook URL
 
-选择以下任一推送服务（二选一）：
-
-#### 方案 A: PushPlus (推荐)
-1. 访问 https://www.pushplus.plus/
-2. 微信扫码登录
-3. 在个人中心复制 **Token**
-
-#### 方案 B: Server酱
-1. 访问 https://sct.ftqq.com/
-2. 微信扫码登录
-3. 在 SendKey 页面复制 **SendKey**
+1. 打开企业微信，进入目标群聊
+2. 点击群设置 → 群机器人 → 添加
+3. 复制 Webhook 地址 (格式: `https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxx`)
 
 ### 2. 配置 GitHub Secrets
 
 在仓库 Settings → Secrets and variables → Actions 中添加：
 
-| Secret 名称 | 值 | 必填 |
-|------------|-----|------|
-| `PUSH_TOKEN` | PushPlus Token 或 Server酱 SendKey | 是 |
-| `PUSH_CHANNEL` | `pushplus` 或 `serverchan` | 否，默认 `pushplus` |
+| Secret 名称 | 值 |
+|------------|-----|
+| `WECHAT_WEBHOOK_URL` | 企业微信群机器人 Webhook URL |
 
 ### 3. 手动测试
 
